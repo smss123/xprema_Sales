@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="xpremaSales" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SEZEROFFICE-PC\SQL2008;Initial Catalog=xpremaSales;Integrated Security=True" SettingsObjectName="XSales.Properties.Settings" SettingsPropertyName="xpremaSalesConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ItemCategory" Member="ItemCategories">
+    <Type Name="ItemCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CtegoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ItemCategory_Item" Member="Items" ThisKey="ID" OtherKey="CategoryID" Type="Item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Store" Member="Stores">
+    <Type Name="Store">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateOfImport" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ExpiredDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ItemBarCode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Item_Store" Member="Item" ThisKey="ItemID" OtherKey="ID" Type="Item" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Items" Member="Items">
+    <Type Name="Item">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemModel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemPrice" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Item_Store" Member="Stores" ThisKey="ID" OtherKey="ItemID" Type="Store" />
+      <Association Name="Item_StoreHistory" Member="StoreHistories" ThisKey="ID" OtherKey="ItemID" Type="StoreHistory" />
+      <Association Name="Item_BillDetail" Member="BillDetails" ThisKey="ID" OtherKey="ItemID" Type="BillDetail" />
+      <Association Name="ItemCategory_Item" Member="ItemCategory" ThisKey="CategoryID" OtherKey="ID" Type="ItemCategory" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StoreHistory" Member="StoreHistories">
+    <Type Name="StoreHistory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateOfProcess" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Item_StoreHistory" Member="Item" ThisKey="ItemID" OtherKey="ID" Type="Item" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExpenssesDetails" Member="ExpenssesDetails">
+    <Type Name="ExpenssesDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenssesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DateOf" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Expenss_ExpenssesDetail" Member="Expenss" ThisKey="ExpenssesID" OtherKey="ID" Type="Expenss" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Expensses" Member="Expensses">
+    <Type Name="Expenss">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpensessName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Expenss_ExpenssesDetail" Member="ExpenssesDetails" ThisKey="ID" OtherKey="ExpenssesID" Type="ExpenssesDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurshesBills" Member="PurshesBills">
+    <Type Name="PurshesBill">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PursesID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DatefProcess" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SuppilerName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Descriptin" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Association Name="PurshesBill_PourshesDetail" Member="PourshesDetails" ThisKey="ID" OtherKey="PourshesID" Type="PourshesDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PourshesDetails" Member="PourshesDetails">
+    <Type Name="PourshesDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PourshesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="PurshesBill_PourshesDetail" Member="PurshesBill" ThisKey="PourshesID" OtherKey="ID" Type="PurshesBill" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BillDetails" Member="BillDetails">
+    <Type Name="BillDetail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BillID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Item_BillDetail" Member="Item" ThisKey="ItemID" OtherKey="ID" Type="Item" IsForeignKey="true" />
+      <Association Name="Bill_BillDetail" Member="Bill" ThisKey="BillID" OtherKey="ID" Type="Bill" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BillDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BillAmunt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Bill_BillDetail" Member="BillDetails" ThisKey="ID" OtherKey="BillID" Type="BillDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerQ_Details" Member="CustomerQ_Details">
+    <Type Name="CustomerQ_Detail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CustomerQotaion_CustomerQ_Detail" Member="CustomerQotaion" ThisKey="QID" OtherKey="ID" Type="CustomerQotaion" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Customer_CustomerQotaion" Member="CustomerQotaions" ThisKey="ID" OtherKey="CustomerID" Type="CustomerQotaion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerQotaion" Member="CustomerQotaions">
+    <Type Name="CustomerQotaion">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CustomerQotaion_CustomerQ_Detail" Member="CustomerQ_Details" ThisKey="ID" OtherKey="QID" Type="CustomerQ_Detail" />
+      <Association Name="Customer_CustomerQotaion" Member="Customer" ThisKey="CustomerID" OtherKey="ID" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pwd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsCategory" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsItem" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsStore" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ispurchase" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSales" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsExpensses" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsGoods" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsSalesBetween2Date" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsReportExpensses" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsBalanceSheet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

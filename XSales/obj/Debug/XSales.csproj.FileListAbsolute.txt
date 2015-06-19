@@ -1,0 +1,50 @@
+F:\our system\Sales\XSales\XSales\bin\Debug\XSales.exe.config
+F:\our system\Sales\XSales\XSales\bin\Debug\XSales.exe
+F:\our system\Sales\XSales\XSales\bin\Debug\XSales.pdb
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.csprojResolveAssemblyReference.cache
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmCategory.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmMain.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.Properties.Resources.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.csproj.GenerateResource.Cache
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.exe.licenses
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.exe
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.pdb
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmItem.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmStore.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmAddToStore.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmExpensses.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmPurshes.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.frmSales.resources
+F:\our system\Sales\XSales\XSales\obj\Debug\XSales.Layers.frmSelectServer.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\bin\Debug\XSales.exe.config
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.exe
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.pdb
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\bin\Debug\XSales.exe
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\bin\Debug\XSales.pdb
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmAddToStore.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmCategory.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmExpensses.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmItem.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmMain.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmPurshes.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmSales.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmStore.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.Layers.frmSelectServer.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.Properties.Resources.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.csproj.GenerateResource.Cache
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.exe.licenses
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmCustomer.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.ReportEngin.frmviewer.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\RdlCompile.cache
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\RdlCompile.compiled
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.Form1.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.ReportEngin.Options.frmSales.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.ReportEngin.Options.frmExpensses.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.ReportEngin.Options.frmBalanceSheet.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmUser.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.frmLogin.resources
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\obj\Debug\XSales.csprojResolveAssemblyReference.cache
+C:\Users\sezerOffice\OneDrive\XSales\XSales\XSales\bin\Debug\DocX.dll
+C:\Users\samer\Documents\GitHub\xprema_Sales\XSales\bin\Debug\XSales.exe.config
+C:\Users\samer\Documents\GitHub\xprema_Sales\XSales\obj\Debug\XSales.exe
+C:\Users\samer\Documents\GitHub\xprema_Sales\XSales\obj\Debug\XSales.pdb
