@@ -70,6 +70,7 @@ namespace XSales
                         {
                             var storId = int.Parse(item.Cells[0].Value.ToString());
                             var q = db.db.Stores.First(p => p.ID == storId);
+                            db.db.Stores.DeleteOnSubmit(q);
                             bl.BillDetails.Add(new BillDetail()
                             {
                                 ItemID = q.Item.ID,
@@ -77,6 +78,7 @@ namespace XSales
                                 Status = "0",
 
                             });
+
                         }
                      
 
@@ -100,7 +102,7 @@ namespace XSales
         {
             BaseMyObj cmd = new BaseMyObj();
            
-            MessageBox.Show(e.KeyCode.ToString());
+           // MessageBox.Show(e.KeyCode.ToString());
         }
 
         private void frmSales_Load(object sender, EventArgs e)
